@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#080b10;
+  --panel:#10161f;
+  --panel2:#151d28;
+  --gold:#ffb400;
+  --gold2:#ffd15c;
+  --text:#f7f8fa;
+  --muted:#9aa5b3;
+  --line:rgba(255,180,0,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+.container{width:92%;max-width:1400px;margin:auto}
+
+.header{position:fixed;inset:0 0 auto 0;height:82px;z-index:50;background:rgba(8,11,16,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand{display:flex;align-items:center;gap:13px}
+.brandMark{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--gold),#ff7a00);display:grid;place-items:center;color:#080b10;font-weight:900}
+.brand strong{display:block;color:var(--gold);font-size:16px}
+.brand span{display:block;color:#7f8997;font-size:9px;letter-spacing:2px;margin-top:4px}
+.menu{display:flex;gap:30px}
+.menu a{font-size:14px;font-weight:700;color:#c8ced7;transition:.2s}
+.menu a:hover,.menu a.active{color:var(--gold)}
+.searchButton{width:44px;height:44px;border-radius:12px;background:var(--gold);color:#05070a;display:grid;place-items:center}
+
+.homeHero{min-height:760px;padding-top:82px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 75% 30%,rgba(255,180,0,.10),transparent 30%),linear-gradient(135deg,#090d13 0%,#0c121a 55%,#07090d 100%)}
+.homeHero:after{content:"";position:absolute;right:-100px;top:120px;width:620px;height:620px;border:1px solid rgba(255,180,0,.12);transform:rotate(45deg);box-shadow:0 0 100px rgba(255,180,0,.05)}
+.homeHeroContent{position:relative;z-index:2}
+.eyebrow{display:inline-block;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:2.4px;margin-bottom:20px}
+.homeHero h1{font-size:clamp(58px,8vw,112px);line-height:.9;letter-spacing:-5px;max-width:980px;font-weight:900}
+.homeHero h1 em{font-style:normal;color:var(--gold)}
+.homeHero p{max-width:700px;color:#b8c0cb;font-size:20px;line-height:1.7;margin:34px 0}
+.heroActions{display:flex;gap:14px;flex-wrap:wrap}
+.primaryButton,.secondaryButton{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:12px;font-weight:800;border:1px solid transparent}
+.primaryButton{background:var(--gold);color:#07090d}
+.secondaryButton{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff}
+
+.quickStrip{margin-top:-58px;position:relative;z-index:5}
+.quickGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.portalCard{background:linear-gradient(145deg,#141b25,#0d1219);border:1px solid var(--line);border-radius:20px;padding:28px;min-height:230px;transition:.3s}
+.portalCard:hover{transform:translateY(-7px);border-color:var(--gold)}
+.portalCardTop{display:flex;justify-content:space-between;align-items:center}
+.portalIcon,.toolIcon{width:54px;height:54px;border-radius:14px;background:rgba(255,180,0,.12);color:var(--gold);display:grid;place-items:center;font-size:23px;font-weight:900}
+.miniBadge{font-size:10px;font-weight:900;letter-spacing:1px;color:var(--gold);border:1px solid var(--line);padding:7px 9px;border-radius:999px}
+.portalCard h3{font-size:25px;margin:25px 0 10px}
+.portalCard p,.toolCard p,.guideCard p,.seasonCard p,.buildingCard p,.teamPortalCard p,.muted{color:var(--muted);line-height:1.65}
+.cardLink{display:inline-block;color:var(--gold);font-weight:800;margin-top:22px}
+
+.contentSection{padding:100px 0}
+.altSection{background:#0b1017;border-block:1px solid rgba(255,255,255,.04)}
+.sectionHeading{display:flex;align-items:end;justify-content:space-between;margin-bottom:40px;gap:20px}
+.sectionHeading h2{font-size:44px}
+.sectionHeading a{color:var(--gold);font-weight:800}
+.toolGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.toolCard{display:flex;gap:18px;align-items:flex-start;background:var(--panel);border:1px solid rgba(255,255,255,.06);padding:22px;border-radius:16px;min-height:135px;transition:.25s}
+.toolCard:hover{border-color:var(--line);transform:translateY(-4px)}
+.toolCard h3{font-size:17px;margin:5px 0 8px}
+.toolCard p{font-size:13px}
+.toolIcon{flex:0 0 48px;width:48px;height:48px;font-size:15px}
+
+.seasonGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.seasonCard{padding:28px;background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid rgba(255,255,255,.06);border-radius:18px}
+.seasonCard>span{font-size:11px;color:var(--gold);font-weight:900;letter-spacing:1.5px}
+.seasonCard h3{font-size:24px;margin:15px 0 10px}
+.seasonCard a,.textButton{display:inline-block;margin-top:22px;color:var(--gold);font-weight:800;background:none;border:0}
+
+.guideGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.guideCard{background:var(--panel);border:1px solid rgba(255,255,255,.06);padding:28px;border-radius:18px}
+.guideCard>span{font-size:10px;color:var(--gold);font-weight:900;letter-spacing:1.4px}
+.guideCard h3{font-size:25px;margin:18px 0 10px}
+.guideCardLarge{min-height:230px}
+
+.pageHero{padding:180px 0 90px;background:radial-gradient(circle at 80% 10%,rgba(255,180,0,.11),transparent 28%),#0b1017;border-bottom:1px solid var(--line)}
+.pageHero h1{font-size:clamp(48px,7vw,82px);letter-spacing:-3px;line-height:1}
+.pageHero p{max-width:780px;margin-top:25px;color:var(--muted);font-size:19px;line-height:1.7}
+
+.calculatorDemo{display:grid;grid-template-columns:1fr 1fr;gap:50px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:40px}
+.calculatorDemo h2{font-size:38px;margin-bottom:18px}
+.calcFields{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.calcFields label{font-size:12px;color:var(--muted);font-weight:800}
+.calcFields input{width:100%;margin-top:8px;height:52px;border-radius:10px;border:1px solid rgba(255,255,255,.08);background:#080c12;color:#fff;padding:0 16px;outline:none}
+.calcResult{grid-column:1/-1;background:rgba(255,180,0,.08);border:1px solid var(--line);border-radius:14px;padding:22px}
+.calcResult span{display:block;color:var(--muted);font-size:12px}
+.calcResult strong{display:block;color:var(--gold);font-size:32px;margin-top:8px}
+.topSpace{margin-top:35px}
+
+.mapPreview{height:170px;border-radius:12px;margin-bottom:22px;background:linear-gradient(135deg,rgba(255,180,0,.2),rgba(255,255,255,.02)),repeating-linear-gradient(45deg,transparent 0 18px,rgba(255,255,255,.03) 18px 19px);display:grid;place-items:center}
+.mapPreview span{font-size:34px;font-weight:900;color:rgba(255,255,255,.75)}
+.buildingGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.buildingCard{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:25px}
+.buildingCard>span{color:var(--gold);font-weight:900}
+.buildingCard h3{margin:18px 0 10px;font-size:20px}
+.serverSpotlight{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:45px}
+.serverSpotlight h2{font-size:64px}
+.serverCode{font-size:110px;font-weight:900;color:rgba(255,180,0,.12)}
+.noticeBox{margin-top:25px;padding:22px;border:1px solid rgba(255,255,255,.07);border-radius:14px;color:var(--muted)}
+.teamPortalGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.teamPortalCard{overflow:hidden;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:20px}
+.teamVisual{height:240px;display:flex;align-items:center;justify-content:space-around;background:radial-gradient(circle,rgba(255,180,0,.18),transparent 55%),#0b1017}
+.teamVisual span{font-size:35px;font-weight:900;color:rgba(255,255,255,.18)}
+.teamVisual strong{font-size:72px;color:var(--gold)}
+.teamPortalContent{padding:28px}
+.teamPortalContent h2{font-size:28px;margin:18px 0 10px}
+.teamPortalContent .primaryButton{margin-top:24px}
+
+.footer{border-top:1px solid var(--line);background:#05070a;padding:42px 0}
+.footerContent{text-align:center}
+.footerContent p{color:#c6ccd5;line-height:1.7}
+.footerContent strong{color:var(--gold)}
+.footerDisclaimer{font-style:italic!important;color:#707b89!important;font-size:13px;margin-top:12px}
+
+@media(max-width:1050px){
+  .menu{display:none}
+  .toolGrid,.buildingGrid{grid-template-columns:repeat(2,1fr)}
+  .quickGrid,.seasonGrid,.guideGrid,.teamPortalGrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .header{height:72px}.brand span{display:none}.brand strong{font-size:13px}
+  .homeHero{min-height:690px;padding-top:72px}.homeHero h1{font-size:56px;letter-spacing:-3px}
+  .homeHero p{font-size:17px}
+  .quickStrip{margin-top:-30px}
+  .quickGrid,.toolGrid,.seasonGrid,.guideGrid,.buildingGrid,.teamPortalGrid{grid-template-columns:1fr}
+  .contentSection{padding:70px 0}
+  .sectionHeading{align-items:flex-start;flex-direction:column}.sectionHeading h2{font-size:34px}
+  .calculatorDemo{grid-template-columns:1fr;padding:25px}.calcFields{grid-template-columns:1fr}.calcResult{grid-column:auto}
+  .pageHero{padding:140px 0 70px}.pageHero h1{font-size:48px}
+  .serverSpotlight{padding:28px}.serverCode{display:none}
+}
